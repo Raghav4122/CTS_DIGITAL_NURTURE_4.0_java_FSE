@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local Community Event Portal</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- Internal CSS for body background -->
+    <style>
+        /* Internal: Body background color */
+        body {
+            background-color: #f0f4f8;
+        }
+    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles/exercises/1_styles.css">
+</head>
+<body>
+    <!-- Inline style for heading -->
+    <h1 style="color: red;">Welcome to the Community Event Portal</h1>
+    
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main Header -->
+    <h2 id="mainHeader">Upcoming Events</h2>
+    
+    <!-- Event Cards -->
+    <div class="eventCard">
+        <h3>Music Night</h3>
+        <p>Join us for an evening of live music and fun!</p>
+        <button class="cta-button">Register</button>
+    </div>
+    <div class="eventCard">
+        <h3>Art Workshop</h3>
+        <p>Explore your creativity with local artists. All ages welcome.</p>
+        <button class="cta-button">Register</button>
+    </div>
+    
+    <!-- News Article (Multi-column) -->
+    <section class="news-article">
+        <h2>Community Bulletin</h2>
+        <p>
+            The city council is excited to announce a series of new initiatives aimed at improving local parks and recreation facilities. Volunteers are needed for upcoming clean-up events. Stay tuned for more updates and opportunities to get involved in your community!
+        </p>
+        <p>
+            Don’t forget to check out our weekly farmers’ market every Saturday morning. Fresh produce, local crafts, and live entertainment await. Support your neighbors and enjoy the best our community has to offer!
+        </p>
+    </section>
+    
+    <!-- Events Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Event</th>
+                <th>Date</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Music Night</td>
+                <td>June 10</td>
+                <td>Central Park</td>
+            </tr>
+            <tr>
+                <td>Art Workshop</td>
+                <td>June 15</td>
+                <td>Community Center</td>
+            </tr>
+            <tr>
+                <td>Farmers’ Market</td>
+                <td>Every Saturday</td>
+                <td>Main Square</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- Simple Form -->
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="event">Event:</label>
+        <select id="event" name="event">
+            <option value="music">Music Night</option>
+            <option value="art">Art Workshop</option>
+        </select><br><br>
+        <input type="submit" value="Sign Up">
+    </form>
+    
+    <!-- Example for visibility/display -->
+    <div class="hide">This is hidden (visibility: hidden)</div>
+    <div class="remove">This is removed (display: none)</div>
+</body>
+</html>

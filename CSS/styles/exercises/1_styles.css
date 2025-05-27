@@ -1,0 +1,256 @@
+/* =========================
+   1. Universal Reset
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   2. Body and Background
+   ========================= */
+/* Use HEX and RGBA, background image with fallback */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(34, 34, 34, 0.9);
+    background: #f0f4f8 url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* =========================
+   3. Navigation Styles
+   ========================= */
+/* Remove bullets, add spacing, style links */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 16px;
+    padding: 8px 16px;
+}
+nav ul li:last-child {
+    margin-right: 0;
+}
+/* Link pseudo-classes */
+nav ul li a:link { color: #007BFF; text-decoration: none; font-weight: 700; }
+nav ul li a:visited { color: #5a5a5a; }
+nav ul li a:hover { color: #0056b3; text-decoration: underline; }
+nav ul li a:active { color: #FF5722; }
+
+/* =========================
+   4. Header Styles
+   ========================= */
+/* ID selector for banner, gradient background */
+#mainHeader {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin: 24px auto 16px auto;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #007BFF, #00C6FF);
+}
+
+/* Element selector for all h2, with gradient */
+h2 {
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    background: linear-gradient(90deg, #00C6FF, #007BFF);
+    color: #fff;
+}
+
+/* Grouping selector for h3, p */
+h3, p {
+    font-family: 'Roboto', sans-serif;
+    color: #444;
+}
+
+/* =========================
+   5. Event Card Styles
+   ========================= */
+/* Class selector for event containers */
+.eventCard {
+    background: #fff;
+    border: 2px solid #007BFF;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 20px;
+    margin: 24px auto;
+    width: 80%;
+    border-radius: 8px;
+    transition: box-shadow 0.2s;
+}
+.eventCard:hover {
+    box-shadow: 0 4px 16px rgba(0,123,255,0.15);
+}
+/* Event card description styles */
+.eventCard p {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 400;
+    text-align: justify;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+}
+
+/* =========================
+   6. CTA Button Styles
+   ========================= */
+/* Style for main CTA button */
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+/* Hover effect for CTA button */
+.cta-button:hover {
+    background: #0056b3;
+}
+
+/* =========================
+   7. News Article (Multi-column)
+   ========================= */
+/* Multi-column layout for news section */
+.news-article {
+    background: rgba(255,255,255,0.9);
+    margin: 32px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 8px;
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid gray;
+}
+.news-article h2 {
+    background: linear-gradient(90deg, #00C6FF, #007BFF);
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   8. Table Styling
+   ========================= */
+/* Table layout and zebra striping */
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+    background: #fafafa;
+}
+tr:nth-child(even) {
+    background: #f0f4f8;
+}
+
+/* =========================
+   9. Form Styling & Box Model
+   ========================= */
+/* Form container styles */
+form {
+    background: #fff;
+    width: 60%;
+    margin: 32px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+/* Input and select styles */
+input[type="text"], select {
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 60%;
+}
+/* Submit button styles */
+input[type="submit"] {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* Outline for selected fields */
+input:focus, select:focus {
+    outline: 2px solid #FF5722;
+}
+
+/* =========================
+   10. Visibility vs Display
+   ========================= */
+/* Compare visibility: hidden vs display: none */
+.hide {
+    visibility: hidden;
+}
+.remove {
+    display: none;
+}
+
+/* =========================
+   11. Responsive Design
+   ========================= */
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .eventCard, .news-article, form, table {
+        width: 98%;
+        padding: 10px;
+    }
+    body {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* =========================
+   12. Bonus: Flexbox for Event Cards
+   ========================= */
+/* Flexbox layout for event cards on larger screens */
+@media (min-width: 769px) {
+    .eventCard {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
